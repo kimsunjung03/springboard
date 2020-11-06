@@ -22,12 +22,12 @@ public class PostsRepositoryTest {
     PostsRepository postsRepository;
 
     @After
-    public void cleanup(){
+    public void cleanup() {
         postsRepository.deleteAll();
     }
 
     @Test
-    public void 게시글저장_불러오기(){
+    public void 게시글저장_불러오기() {
         String title = "테스트게시글";
         String content = "테스트 본문";
 
@@ -45,8 +45,8 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void BaseTimeEntity_등록(){
-        LocalDateTime now = LocalDateTime.of(2019,6,4,0,0,0);
+    public void BaseTimeEntity_등록() {
+        LocalDateTime now = LocalDateTime.of(2019, 6, 4, 0, 0, 0);
         postsRepository.save(Posts.builder()
                 .title("title")
                 .content("content")
