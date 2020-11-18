@@ -4,7 +4,11 @@ import com.example.springboard.web.dto.PostsResponseDto;
 import com.example.springboard.web.dto.PostsSaveRequestDto;
 import com.example.springboard.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.w3c.dom.stylesheets.LinkStyle;
+
+import java.util.List;
 
 
 @RequiredArgsConstructor
@@ -28,4 +32,5 @@ public class PostsApiController {
     {
         return postsService.findById(id);
     }
+
 }

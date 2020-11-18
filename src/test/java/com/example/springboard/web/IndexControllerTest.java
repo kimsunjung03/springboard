@@ -11,16 +11,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class IndexControllerTest {
+public class IndexControllerTest{
 
     @Autowired
     private TestRestTemplate restTemplate;
 
     @Test
-    public void 메인페이지_로딩(){
-        String body =this.restTemplate.getForObject("/", String.class);
+    public void loadMainPage(){
+        String body = this.restTemplate.getForObject("/", String.class);
 
-        assertThat(body).contains("스프링 부트로 시작하는 웹서비스");
+        assertThat(body).contains("스프링부트 웹서비스");
     }
-
 }
